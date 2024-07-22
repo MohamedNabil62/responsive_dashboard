@@ -2,15 +2,17 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:resp_app/tast.dart';
+import 'package:resp_app/views/dashboard_views.dart';
 
 Future main() async{
   //يتاكد ان كل حاجه هنا  في الفانكشن خلصت وبعد كده يفتح الابلكيشن
   WidgetsFlutterBinding.ensureInitialized();
-  runApp((DevicePreview(
+  /*runApp((DevicePreview(
     enabled: true,
     builder: (context) => const MyApp(),
   )));
+   */
+  runApp(MyApp());
 }
 class MyApp extends StatelessWidget
 {
@@ -18,11 +20,11 @@ class MyApp extends StatelessWidget
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-        locale: DevicePreview.locale(context),
-        builder: DevicePreview.appBuilder,
+        //locale: DevicePreview.locale(context),
+        //builder: DevicePreview.appBuilder,
         debugShowCheckedModeBanner: false,
         home: Directionality(textDirection: TextDirection.ltr,
-          child:TastScreen(),
+          child:DashBoardViews(),
         )
     );
 
