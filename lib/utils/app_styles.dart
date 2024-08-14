@@ -2,7 +2,6 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:resp_app/utils/size_config.dart';
 
-
 abstract class AppStyles {
   static TextStyle styleRegular16(context) {
     return TextStyle(
